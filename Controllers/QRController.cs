@@ -24,7 +24,7 @@ namespace Polyempaques_API.Controllers
         {
             try
             {
-                var qrs = _context.QR.ToList();
+                var qrs = _context.QR.Where(qr => qr.activo == true).ToList();
                 return Ok(qrs);
             }
             catch (Exception ex)
@@ -41,6 +41,8 @@ namespace Polyempaques_API.Controllers
             {
                 qR.timestamp = fechaActual;
                 qR.idUsuario = 1;
+                qR.activo = true;
+                qR.ediciones = 0;
                 _context.QR.Add(qR);
                 _context.SaveChanges();
                 return Ok(new
@@ -63,6 +65,7 @@ namespace Polyempaques_API.Controllers
         public ActionResult Put([FromBody] QR qR)
         {
             var qrSeek = _context.QR.FirstOrDefault(qr => qr.idQR == qR.idQR);
+            int? ediciones = qrSeek.ediciones == null || qrSeek.ediciones == 0 ? 1 : qrSeek.ediciones + 1;
             try
             {
                 qrSeek.descripcion = qR.descripcion;
@@ -71,6 +74,7 @@ namespace Polyempaques_API.Controllers
                 qrSeek.poNumber = qR.poNumber;
                 qrSeek.serialNumber = qR.serialNumber;
                 qrSeek.timestamp = fechaActual;
+                qrSeek.ediciones = ediciones;
                 _context.Update(qrSeek);
                 _context.SaveChanges();
                 return Ok(new
@@ -98,7 +102,9 @@ namespace Polyempaques_API.Controllers
                 var qr = _context.QR.FirstOrDefault(qr => qr.idQR == idQR);
                 if (qr != null)
                 {
-                    _context.QR.Remove(qr);
+                    qr.activo = false;
+                    qr.ediciones = qr.ediciones + 1;
+                    _context.QR.Update(qr);
                     _context.SaveChanges();
                     return Ok();
                 }
@@ -106,7 +112,7 @@ namespace Polyempaques_API.Controllers
                 {
                     return Ok();
                 }
-                
+
             }
             catch (Exception ex)
             {

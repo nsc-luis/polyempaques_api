@@ -16,5 +16,7 @@ namespace Polyempaques_API.Models
         public string serialNumber { get; set; }
         public DateTime? timestamp { get; set; }
         public int? idUsuario { get; set; }
+        public int? ediciones { get; set; }
+        public bool? activo { get; set; }
     }
 }

@@ -205,21 +205,21 @@ namespace Polyempaques_API.Controllers
                     var main = wordDoc.MainDocumentPart.Document;
                     //var bookmarksHeader = wordDoc.MainDocumentPart.HeaderParts.FirstOrDefault().RootElement.Descendants<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>().ToList();
                     var bookmarks = main.Descendants<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>().ToList();
-                    AgregarTextoAlMarcador(bookmarks, "descripcion", qr.descripcion, true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "partNumber", qr.partNumber, true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "quantity", qr.quantity.ToString(), true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "poNumber", qr.poNumber.ToString(), true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "trace", qr.trace.ToString(), true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "serialNumber", qr.serialNumber.ToString(), true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "qrData", $"P{qr.partNumber},Q{qr.quantity},K{qr.poNumber},N{qr.serialNumber}", false, false, "Arial Narrow", "15");
+                    AgregarTextoAlMarcador(bookmarks, "descripcion", qr.descripcion, true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "partNumber", qr.partNumber, true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "quantity", qr.quantity.ToString(), true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "poNumber", qr.poNumber.ToString(), true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "trace", qr.trace.ToString(), true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "serialNumber", qr.serialNumber.ToString(), true, false, "Arial Narrow", "72");
+                    //AgregarTextoAlMarcador(bookmarks, "qrData", $"P{qr.partNumber},Q{qr.quantity},K{qr.poNumber},N{qr.serialNumber}", false, false, "Arial Narrow", "15");
 
-                    AgregarTextoAlMarcador(bookmarks, "descripcion2", qr.descripcion, true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "partNumber2", qr.partNumber, true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "quantity2", qr.quantity.ToString(), true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "poNumber2", qr.poNumber.ToString(), true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "trace2", qr.trace.ToString(), true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "serialNumber2", qr.serialNumber.ToString(), true, false, "Arial Narrow", "75");
-                    AgregarTextoAlMarcador(bookmarks, "qrData2", $"P{qr.partNumber},Q{qr.quantity},K{qr.poNumber},N{qr.serialNumber}", false, false, "Arial Narrow", "15");
+                    AgregarTextoAlMarcador(bookmarks, "descripcion2", qr.descripcion, true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "partNumber2", qr.partNumber, true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "quantity2", qr.quantity.ToString(), true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "poNumber2", qr.poNumber.ToString(), true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "trace2", qr.trace.ToString(), true, false, "Arial Narrow", "72");
+                    AgregarTextoAlMarcador(bookmarks, "serialNumber2", qr.serialNumber.ToString(), true, false, "Arial Narrow", "72");
+                    //AgregarTextoAlMarcador(bookmarks, "qrData2", $"P{qr.partNumber},Q{qr.quantity},K{qr.poNumber},N{qr.serialNumber}", false, false, "Arial Narrow", "15");
                     main.Save();
                 }
 

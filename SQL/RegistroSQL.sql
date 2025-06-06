@@ -1,0 +1,17 @@
+--ALTA DE TABLA
+--CREATE TABLE QR (
+--	idQR in not null primary key identity(1,1),
+--	descripcion varchar(max) not null,
+--	partNumber varchar(25) not null,
+--	quantity int not null,
+--	poNumber varchar(55) not null,
+--	trace varchar(25) not null,
+--	serialNumber varchar(25) not null,
+--	timestamp datetime not null getdate,
+--	idUsuario int not null
+--)
+
+--ACTUALIZACION 03/06/2025
+--ALTER TABLE QR ADD ediciones int default 0;
+--ALTER TABLE QR ADD activo bit default 1;
+--UPDATE QR SET activo = 1

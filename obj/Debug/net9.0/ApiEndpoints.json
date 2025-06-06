@@ -1,0 +1,102 @@
+[
+  {
+    "ContainingType": "Polyempaques_API.Controllers.DocumentoPDFController",
+    "Method": "GeneraEtiqueta",
+    "RelativePath": "api/DocumentoPDF/GeneraEtiqueta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "qr",
+        "Type": "Polyempaques_API.Models.QR",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.PerfilesController",
+    "Method": "perfilDeUsuario",
+    "RelativePath": "api/Perfiles/perfilDeUsuario/{idPerfil}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPerfil",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.QRController",
+    "Method": "Get",
+    "RelativePath": "api/QR",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.QRController",
+    "Method": "Post",
+    "RelativePath": "api/QR",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "qR",
+        "Type": "Polyempaques_API.Models.QR",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.QRController",
+    "Method": "Put",
+    "RelativePath": "api/QR",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "qR",
+        "Type": "Polyempaques_API.Models.QR",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.QRController",
+    "Method": "Delete",
+    "RelativePath": "api/QR/{idQR}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idQR",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.UsuariosController",
+    "Method": "Post",
+    "RelativePath": "api/Usuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
