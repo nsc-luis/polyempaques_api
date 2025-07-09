@@ -172,3 +172,16 @@ D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\obj\Debu
 D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\obj\Debug\net9.0\Polyempaques_API.pdb
 D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\obj\Debug\net9.0\Polyempaques_API.genruntimeconfig.cache
 D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\obj\Debug\net9.0\ref\Polyempaques_API.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\BitMiracle.LibTiff.NET.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\Google.Protobuf.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\Grpc.Core.Api.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\Grpc.Net.Client.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\Grpc.Net.Common.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\IronSoftware.Logger.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\IronSoftware.Shared.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\IronSoftware.Drawing.Abstractions.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\IronSoftware.Drawing.Common.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\IronXL.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\SixLabors.Fonts.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\SixLabors.ImageSharp.dll
+D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Debug\net9.0\SixLabors.ImageSharp.Drawing.dll

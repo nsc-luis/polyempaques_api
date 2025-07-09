@@ -14,5 +14,9 @@ namespace Polyempaques_API
         public DbSet<PerfilOperacion> PerfilOperacion { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<QR> QR { get; set; }
+        public DbSet<Producto1> Producto1 { get; set; }
+        public DbSet<OdT1> OdT1 { get; set; }
+        public DbSet<MovimientosOdT1> MovimientosOdT1 { get; set; }
+        public DbSet<BitacoraDeCarga1> BitacoraDeCarga1 { get; set; }
     }
 }
