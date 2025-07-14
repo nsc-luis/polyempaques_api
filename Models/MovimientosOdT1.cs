@@ -12,5 +12,6 @@ namespace Polyempaques_API.Models
         public int quantity { get; set; }
         public int idUsuario { get; set; }
         public DateTime? timestamp { get; set; }
+        public bool activo { get; set; }
     }
 }

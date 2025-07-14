@@ -37,29 +37,27 @@ namespace Polyempaques_API.Controllers
             }
         }
 
-        // GET api/<OdT1Controller>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpDelete("{idOdT}")]
+        [EnableCors("AllowAnyOrigin")]
+        public IActionResult Delete(int idOdT)
         {
-            return "value";
-        }
-
-        // POST api/<OdT1Controller>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<OdT1Controller>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<OdT1Controller>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            try
+            {
+                OdT1Data odT1Data = new OdT1Data(_context);
+                odT1Data.eliminarOdT(idOdT);
+                return Ok(new
+                {
+                    status = "ok"
+                });
+            }
+            catch (Exception err)
+            {
+                return Ok(new
+                {
+                    status = "error",
+                    mensaje = err.Message
+                });
+            }
         }
     }
 }

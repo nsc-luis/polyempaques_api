@@ -3,40 +3,20 @@
   "WorkspaceRootPath": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\controllers\\movimientosodt1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:controllers\\movimientosodt1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\data\\documentopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:data\\documentopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\controllers\\bitacoradecarga1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:controllers\\bitacoradecarga1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\controllers\\odt1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:controllers\\odt1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\controllers\\documentopdfcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:controllers\\documentopdfcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\controllers\\cargaexcelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:controllers\\cargaexcelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\data\\movimientosodt1data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:data\\movimientosodt1data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\data\\odt1data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:data\\odt1data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\data\\cargaexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:data\\cargaexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\data\\bitacoradecarga1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:data\\bitacoradecarga1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\models\\bitacoradecarga1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:models\\bitacoradecarga1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,116 +34,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MovimientosOdT1Controller.cs",
-              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\MovimientosOdT1Controller.cs",
-              "RelativeDocumentMoniker": "Controllers\\MovimientosOdT1Controller.cs",
-              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\MovimientosOdT1Controller.cs",
-              "RelativeToolTip": "Controllers\\MovimientosOdT1Controller.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBwAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DocumentoPDFController.cs",
+              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\DocumentoPDFController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DocumentoPDFController.cs",
+              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\DocumentoPDFController.cs",
+              "RelativeToolTip": "Controllers\\DocumentoPDFController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAuwDEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T07:33:23.651Z",
+              "WhenOpened": "2025-07-10T06:18:09.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MovimientosOdT1Data.cs",
-              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\MovimientosOdT1Data.cs",
-              "RelativeDocumentMoniker": "Data\\MovimientosOdT1Data.cs",
-              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\MovimientosOdT1Data.cs",
-              "RelativeToolTip": "Data\\MovimientosOdT1Data.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "DocumentoPDF.cs",
+              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\DocumentoPDF.cs",
+              "RelativeDocumentMoniker": "Data\\DocumentoPDF.cs",
+              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\DocumentoPDF.cs",
+              "RelativeToolTip": "Data\\DocumentoPDF.cs",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAwwFgBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T07:29:58.324Z",
+              "WhenOpened": "2025-07-10T04:57:06.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "OdT1Controller.cs",
-              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\OdT1Controller.cs",
-              "RelativeDocumentMoniker": "Controllers\\OdT1Controller.cs",
-              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\OdT1Controller.cs",
-              "RelativeToolTip": "Controllers\\OdT1Controller.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowB4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T07:24:11.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OdT1Data.cs",
-              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\OdT1Data.cs",
-              "RelativeDocumentMoniker": "Data\\OdT1Data.cs",
-              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\OdT1Data.cs",
-              "RelativeToolTip": "Data\\OdT1Data.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:59:26.238Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CargaExcelController.cs",
               "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\CargaExcelController.cs",
               "RelativeDocumentMoniker": "Controllers\\CargaExcelController.cs",
               "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\CargaExcelController.cs",
               "RelativeToolTip": "Controllers\\CargaExcelController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBYAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAMBSwA8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T05:43:03.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BitacoraDeCarga1Controller.cs",
-              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\BitacoraDeCarga1Controller.cs",
-              "RelativeDocumentMoniker": "Controllers\\BitacoraDeCarga1Controller.cs",
-              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\BitacoraDeCarga1Controller.cs",
-              "RelativeToolTip": "Controllers\\BitacoraDeCarga1Controller.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:45:20.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BitacoraDeCarga1.cs",
-              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Models\\BitacoraDeCarga1.cs",
-              "RelativeDocumentMoniker": "Models\\BitacoraDeCarga1.cs",
-              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Models\\BitacoraDeCarga1.cs",
-              "RelativeToolTip": "Models\\BitacoraDeCarga1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:39:00.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BitacoraDeCarga1.cs",
-              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\BitacoraDeCarga1.cs",
-              "RelativeDocumentMoniker": "Data\\BitacoraDeCarga1.cs",
-              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\BitacoraDeCarga1.cs",
-              "RelativeToolTip": "Data\\BitacoraDeCarga1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:23:58.553Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "CargaExcel.cs",
               "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\CargaExcel.cs",
               "RelativeDocumentMoniker": "Data\\CargaExcel.cs",
               "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\CargaExcel.cs",
               "RelativeToolTip": "Data\\CargaExcel.cs",
-              "ViewState": "AgIAABMBAAAAAAAAAAAAABoBAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAkwAMBAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T18:11:55.665Z"
+              "WhenOpened": "2025-07-07T18:11:55.665Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Polyempaques_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66bcc12c91ff33285a70c27620b91c803c064278")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a2799d8f0adf0599bb4460ccf72bc24b4ebc487")]
 [assembly: System.Reflection.AssemblyProductAttribute("Polyempaques_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Polyempaques_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

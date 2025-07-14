@@ -210,7 +210,7 @@ namespace Polyempaques_API.Data
                     );
                 }
 
-                OdT1 odT = _context.OdT1.FirstOrDefault(o => o.poNumber == poNumber && o.idProducto == producto1.idProducto);
+                OdT1 odT = _context.OdT1.FirstOrDefault(o => o.poNumber == poNumber && o.idProducto == producto1.idProducto && o.activo == true);
 
                 if (odT == null)
                 {
@@ -222,7 +222,8 @@ namespace Polyempaques_API.Data
                         poNumber = poNumber,
                         totalKgOT = totalKgOT,
                         idUsuario = 1, // Asignar un idUsuario válido
-                        timestamp = DateTime.Now
+                        timestamp = DateTime.Now,
+                        activo = true
                     };
                     _context.OdT1.Add(odT1);
                     _context.SaveChanges();
@@ -255,7 +256,8 @@ namespace Polyempaques_API.Data
                                     serialNumber = serialNumber,
                                     quantity = quantity,
                                     idUsuario = 1, // Asignar un idUsuario válido
-                                    timestamp = DateTime.Now
+                                    timestamp = DateTime.Now,
+                                    activo = true
                                 };
                                 _context.MovimientosOdT1.Add(movimientoOdT1);
                                 _context.SaveChanges();

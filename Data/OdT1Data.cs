@@ -1,4 +1,6 @@
-﻿namespace Polyempaques_API.Data
+﻿using Polyempaques_API.Models;
+
+namespace Polyempaques_API.Data
 {
     public class OdT1Data
     {
@@ -23,7 +25,9 @@
         {
             List<GetOdTs> getOdTs = new List<GetOdTs>();
             var odts = (from o in _context.OdT1
-                        join p in _context.Producto1 on o.idProducto equals p.idProducto                     select new
+                        join p in _context.Producto1 on o.idProducto equals p.idProducto
+                        where o.activo == true
+                        select new
                         {
                             o.idOdT,
                             o.poNumber,
@@ -49,6 +53,13 @@
                 });
             }
             return getOdTs;
+        }
+        public void eliminarOdT(int idOdT)
+        {
+            OdT1 odt = _context.OdT1.FirstOrDefault(o => o.idOdT == idOdT);
+            odt.activo = false;
+            _context.OdT1.Update(odt);
+            _context.SaveChanges();
         }
     }
 }

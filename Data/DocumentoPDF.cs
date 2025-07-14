@@ -1,18 +1,27 @@
-﻿using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml;
-using A = DocumentFormat.OpenXml.Drawing;
-using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
-using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using Spire.Doc;
-using Run = DocumentFormat.OpenXml.Wordprocessing.Run;
+﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
+using iText.Kernel.Pdf;
+using iText.Kernel.Utils;
 using Polyempaques_API.Models;
+using QRCoder;
+using Spire.Doc;
 using Spire.Doc.Documents;
 using Spire.Doc.Fields;
-using Paragraph = Spire.Doc.Documents.Paragraph;
+using Spire.Pdf;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
-using QRCoder;
 using System.Drawing.Imaging;
+using System.Linq;
+using static Polyempaques_API.Data.DocumentoPDF;
+using A = DocumentFormat.OpenXml.Drawing;
+using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
+using Paragraph = Spire.Doc.Documents.Paragraph;
+using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
+using Run = DocumentFormat.OpenXml.Wordprocessing.Run;
 
 namespace Polyempaques_API.Data
 {
@@ -23,6 +32,7 @@ namespace Polyempaques_API.Data
         {
             this._context = context;
         }
+
         //SOLO ES UN COMENTARIO
         private void AgregarTextoAlMarcador(
             List<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart> bookmarks,
@@ -191,14 +201,15 @@ namespace Polyempaques_API.Data
 
         public DocumentoPDFGenerado GeneraEtiqueta(QR qr)
         {
-            var fechayhora = DateTime.UtcNow.ToString("yyyy-MM-ddThh-mm-ss");
+            string fechayhora = DateTime.UtcNow.ToString("yyyy-MM-ddThh-mm-ss");
+            string guid = Guid.NewGuid().ToString();
             string pathPlantilla = $"{Environment.CurrentDirectory}\\template\\PlantillaEtiqueta.docx";
 
             // NOMBRE DEL PDF QUE SE CREARA
-            string archivoDeSalida = $"{Environment.CurrentDirectory}\\temp\\PlantillaEtiqueta_{fechayhora}.pdf";
+            string archivoDeSalida = $"{Environment.CurrentDirectory}\\temp\\PlantillaEtiqueta_{fechayhora}_{guid}.pdf";
 
             // ARCHIVO TEMPORAL EN BASE A LA PLANTILLA
-            string archivoTemporal = $"{Environment.CurrentDirectory}\\temp\\PlantillaEtiqueta_{fechayhora}.docx";
+            string archivoTemporal = $"{Environment.CurrentDirectory}\\temp\\PlantillaEtiqueta_{fechayhora}_{guid}.docx";
 
             // Create shadow File
             System.IO.File.Copy(pathPlantilla, archivoTemporal, true);
@@ -280,6 +291,60 @@ namespace Polyempaques_API.Data
                 archivoDeSalida = archivoDeSalida,
                 archivoTemporal = archivoTemporal
             };
+        }
+
+        public string EtiquetasDeUnaOdT(int idOdT)
+        {
+            string fechayhora = DateTime.UtcNow.ToString("yyyy-MM-ddThh-mm-ss");
+            string guid = Guid.NewGuid().ToString();
+            List<QR> qRs = new List<QR>();
+            var listaEtiquetas = (from m in _context.MovimientosOdT1
+                                  join p in _context.Producto1 on m.idProducto equals p.idProducto
+                                  join o in _context.OdT1 on p.idProducto equals o.idProducto
+                                  where m.idOdT == idOdT && o.activo == true && m.activo == true
+                                  select new
+                                  {
+                                      p.descripcion,
+                                      p.partNumber,
+                                      m.quantity,
+                                      o.poNumber,
+                                      trace = "",
+                                      m.serialNumber
+                                  }).ToList();
+            foreach (var item in listaEtiquetas)
+            {
+                qRs.Add(new QR
+                {
+                    descripcion = item.descripcion,
+                    partNumber = item.partNumber,
+                    quantity = item.quantity,
+                    poNumber = item.poNumber,
+                    trace = item.trace,
+                    serialNumber = item.serialNumber
+                });
+            }
+            List<string> listaPDF = new List<string>();
+            foreach (QR qr in qRs)
+            {
+                DocumentoPDFGenerado documentoPDFGenerado = GeneraEtiqueta(qr);
+                Spire.Doc.Document spireDoc = documentoPDFGenerado.documento;
+                spireDoc.SaveToFile(documentoPDFGenerado.archivoDeSalida, Spire.Doc.FileFormat.PDF);
+                System.IO.File.Delete(documentoPDFGenerado.archivoTemporal);
+                listaPDF.Add(documentoPDFGenerado.archivoDeSalida);
+            }
+            string[] foo = listaPDF.ToArray();
+            PdfDocumentBase newPdf = Spire.Pdf.PdfDocument.MergeFiles(foo);
+            newPdf.Save(
+                $"{Environment.CurrentDirectory}\\temp\\EtiquetasOdT_{fechayhora}_{guid}.pdf", 
+                Spire.Pdf.FileFormat.PDF);
+            newPdf.Close();
+
+            foreach (string fileName in listaPDF)
+            {
+                System.IO.File.Delete(fileName);
+            }
+
+            return $"{Environment.CurrentDirectory}\\temp\\EtiquetasOdT_{fechayhora}_{guid}.pdf";
         }
     }
 }

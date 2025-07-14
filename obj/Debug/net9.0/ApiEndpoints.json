@@ -22,13 +22,7 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "path",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -49,6 +43,22 @@
   },
   {
     "ContainingType": "Polyempaques_API.Controllers.DocumentoPDFController",
+    "Method": "EtiquetasDeLaOdt",
+    "RelativePath": "api/DocumentoPDF/EtiquetasDeLaOdt",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idOdT",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.DocumentoPDFController",
     "Method": "GeneraEtiqueta",
     "RelativePath": "api/DocumentoPDF/GeneraEtiqueta",
     "HttpMethod": "POST",
@@ -58,6 +68,22 @@
       {
         "Name": "qr",
         "Type": "Polyempaques_API.Models.QR",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.MovimientosOdT1Controller",
+    "Method": "Delete",
+    "RelativePath": "api/MovimientosOdT1/{idMovto}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idMovto",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -91,100 +117,19 @@
   },
   {
     "ContainingType": "Polyempaques_API.Controllers.OdT1Controller",
-    "Method": "Post",
-    "RelativePath": "api/OdT1",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "value",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Polyempaques_API.Controllers.OdT1Controller",
-    "Method": "Get",
-    "RelativePath": "api/OdT1/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Polyempaques_API.Controllers.OdT1Controller",
-    "Method": "Put",
-    "RelativePath": "api/OdT1/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "value",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Polyempaques_API.Controllers.OdT1Controller",
     "Method": "Delete",
-    "RelativePath": "api/OdT1/{id}",
+    "RelativePath": "api/OdT1/{idOdT}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idOdT",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Polyempaques_API.Controllers.PerfilesController",

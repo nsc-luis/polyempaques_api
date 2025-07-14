@@ -15,6 +15,7 @@ namespace Polyempaques_API.Controllers
         {
             this._context = context;
         }
+
         [HttpGet("{idOdT}")]
         [EnableCors("AllowAnyOrigin")]
         public IActionResult Get(int idOdT)
@@ -32,6 +33,29 @@ namespace Polyempaques_API.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("{idMovto}")]
+        [EnableCors("AllowAnyOrigin")]
+        public IActionResult Delete(int idMovto)
+        {
+            try
+            {
+                MovimientosOdT1Data movimientosOdT1Data = new MovimientosOdT1Data(_context);
+                movimientosOdT1Data.eliminarMovimiento(idMovto);
+                return Ok(new
+                {
+                    status = "ok"
+                });
+            }
+            catch(Exception err)
+            {
+                return Ok(new
+                {
+                    status = "error",
+                    mensaje = err.Message
+                });
             }
         }
     }
