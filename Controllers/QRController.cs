@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Polyempaques_API.Data;
 using Polyempaques_API.Models;
 using System.Diagnostics;
 
@@ -39,16 +40,36 @@ namespace Polyempaques_API.Controllers
         {
             try
             {
-                qR.timestamp = fechaActual;
-                qR.idUsuario = 1;
-                qR.activo = true;
-                qR.ediciones = 0;
-                _context.QR.Add(qR);
-                _context.SaveChanges();
-                return Ok(new
+                var qrs = _context.QR.ToList();
+                int actualizaciones = qrs.Sum(qr => qr.ediciones ?? 0);
+                if ((actualizaciones + qrs.Count) >= 160)
                 {
-                    status = "success"
-                });
+                    return Ok(new
+                    {
+                        status = "error",
+                        mensaje = $"Oops:\nHas llegado al limite de {actualizaciones}/160 alta/actualizacion/eliminación de registros."
+                    });
+                }
+                else if ((actualizaciones + qrs.Count) > 150)
+                {
+                    QRData qRData = new QRData(_context);
+                    qRData.Alta(qR);
+                    return Ok(new
+                    {
+                        status = "warning",
+                        mensaje = $"Advertencia:\nLlevas {actualizaciones}/160 alta/actualizacion/eliminación de registros."
+                    });
+                }
+                
+                else
+                {
+                    QRData qRData = new QRData(_context);
+                    qRData.Alta(qR);
+                    return Ok(new
+                    {
+                        status = "success"
+                    });
+                }
             }
             catch (Exception ex)
             {
@@ -64,24 +85,37 @@ namespace Polyempaques_API.Controllers
         [EnableCors("AllowAnyOrigin")]
         public ActionResult Put([FromBody] QR qR)
         {
-            var qrSeek = _context.QR.FirstOrDefault(qr => qr.idQR == qR.idQR);
-            int? ediciones = qrSeek.ediciones == null || qrSeek.ediciones == 0 ? 1 : qrSeek.ediciones + 1;
             try
             {
-                qrSeek.descripcion = qR.descripcion;
-                qrSeek.partNumber = qR.partNumber;
-                qrSeek.quantity = qR.quantity;
-                qrSeek.poNumber = qR.poNumber;
-                qrSeek.serialNumber = qR.serialNumber;
-                qrSeek.timestamp = fechaActual;
-                qrSeek.ediciones = ediciones;
-                _context.Update(qrSeek);
-                _context.SaveChanges();
-                return Ok(new
+                var qrs = _context.QR.ToList();
+                int actualizaciones = qrs.Sum(qr => qr.ediciones ?? 0);
+                if (actualizaciones >= 160)
                 {
-                    status = "success",
-                    qrSeek
-                });
+                    return Ok(new
+                    {
+                        status = "error",
+                        mensaje = $"Oops:\nHas llegado al limite de {actualizaciones}/160 alta/actualizacion/eliminación de registros."
+                    });
+                }
+                else if (actualizaciones > 150)
+                {
+                    QRData qRData = new QRData(_context);
+                    qRData.Edicion(qR);
+                    return Ok(new
+                    {
+                        status = "warning",
+                        mensaje = $"Advertencia:\nLlevas {actualizaciones}/160 alta/actualizacion/eliminación de registros."
+                    });
+                }
+                else
+                {
+                    QRData qRData = new QRData(_context);
+                    qRData.Edicion(qR);
+                    return Ok(new
+                    {
+                        status = "success"
+                    });
+                }
             }
             catch (Exception ex)
             {
@@ -99,24 +133,43 @@ namespace Polyempaques_API.Controllers
         {
             try
             {
-                var qr = _context.QR.FirstOrDefault(qr => qr.idQR == idQR);
-                if (qr != null)
+                var qrs = _context.QR.ToList();
+                int actualizaciones = qrs.Sum(qr => qr.ediciones ?? 0);
+                if (actualizaciones >= 160)
                 {
-                    qr.activo = false;
-                    qr.ediciones = qr.ediciones + 1;
-                    _context.QR.Update(qr);
-                    _context.SaveChanges();
-                    return Ok();
+                    return Ok(new
+                    {
+                        status = "error",
+                        mensaje = $"Oops:\nHas llegado al limite de {actualizaciones}/160 alta/actualizacion/eliminación de registros."
+                    });
+                }
+                else if(actualizaciones > 150)
+                {
+                    QRData qRData = new QRData(_context);
+                    qRData.Eliminacion(idQR);
+                    return Ok(new
+                    {
+                        status = "warning",
+                        mensaje = $"Advertencia:\nLlevas {actualizaciones}/160 alta/actualizacion/eliminación de registros."
+                    });
                 }
                 else
                 {
-                    return Ok();
+                    QRData qRData = new QRData(_context);
+                    qRData.Eliminacion(idQR);
+                    return Ok(new
+                    {
+                        status = "success"
+                    });
                 }
-
             }
             catch (Exception ex)
             {
-                return Ok(ex.Message);
+                return Ok(new
+                {
+                    status = "error",
+                    mensaje = ex.Message
+                });
             }
         }
     }

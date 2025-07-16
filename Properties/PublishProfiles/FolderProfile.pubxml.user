@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\Users\Lenovo\Documents\Visual Studio 2022\Proyectos\Polyempaques_API\bin\Release\net7.0\publish\</_PublishTargetUrl>
-    <History>True|2025-06-03T18:57:13.2979973Z;True|2025-06-02T13:50:39.4133972-06:00;True|2025-05-31T12:42:33.7444930-06:00;True|2025-05-30T23:33:57.0684877-06:00;True|2025-05-30T23:32:28.9840215-06:00;True|2025-05-30T13:53:59.1541782-06:00;</History>
+    <History>True|2025-07-16T06:32:40.8558495Z||;True|2025-06-03T12:57:13.2979973-06:00||;True|2025-06-02T13:50:39.4133972-06:00||;True|2025-05-31T12:42:33.7444930-06:00||;True|2025-05-30T23:33:57.0684877-06:00||;True|2025-05-30T23:32:28.9840215-06:00||;True|2025-05-30T13:53:59.1541782-06:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
