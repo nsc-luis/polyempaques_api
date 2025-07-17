@@ -50,8 +50,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idOdT",
-        "Type": "System.Int32",
+        "Name": "file",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -68,6 +68,22 @@
       {
         "Name": "qr",
         "Type": "Polyempaques_API.Models.QR",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polyempaques_API.Controllers.DocumentoPDFController",
+    "Method": "ListaPdfOdT",
+    "RelativePath": "api/DocumentoPDF/ListaPdfOdT",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "odt",
+        "Type": "Polyempaques_API.Controllers.DocumentoPDFController\u002BOdTFromBody",
         "IsRequired": true
       }
     ],

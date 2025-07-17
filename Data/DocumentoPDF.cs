@@ -293,10 +293,10 @@ namespace Polyempaques_API.Data
             };
         }
 
-        public string EtiquetasDeUnaOdT(int idOdT)
+        public List<string> EtiquetasDeUnaOdT(int idOdT)
         {
             string fechayhora = DateTime.UtcNow.ToString("yyyy-MM-ddThh-mm-ss");
-            string guid = Guid.NewGuid().ToString();
+            //string guid = Guid.NewGuid().ToString();
             List<QR> qRs = new List<QR>();
             var listaEtiquetas = (from m in _context.MovimientosOdT1
                                   join p in _context.Producto1 on m.idProducto equals p.idProducto
@@ -333,18 +333,37 @@ namespace Polyempaques_API.Data
                 listaPDF.Add(documentoPDFGenerado.archivoDeSalida);
             }
             string[] foo = listaPDF.ToArray();
-            PdfDocumentBase newPdf = Spire.Pdf.PdfDocument.MergeFiles(foo);
-            newPdf.Save(
-                $"{Environment.CurrentDirectory}\\temp\\EtiquetasOdT_{fechayhora}_{guid}.pdf", 
-                Spire.Pdf.FileFormat.PDF);
-            newPdf.Close();
+            List<string> archivosPDF = new List<string>();
+            if (foo.Length <= 9)
+            {
+                PdfDocumentBase newPdf = Spire.Pdf.PdfDocument.MergeFiles(foo);
+                newPdf.Save(
+                    $"{Environment.CurrentDirectory}\\temp\\EtiquetasOdT_{fechayhora}.pdf",
+                    Spire.Pdf.FileFormat.PDF);
+                newPdf.Close();
+                archivosPDF.Add($"{Environment.CurrentDirectory}\\temp\\EtiquetasOdT_{fechayhora}.pdf");            }
+            else
+            {
+                int iteraciones = (foo.Length % 9)+1;
+                for (int i = 0; i < iteraciones; i++)
+                {
+                    string[] subArray = foo.Skip(i * 9).Take(9).ToArray();
+                    PdfDocumentBase newPdf = Spire.Pdf.PdfDocument.MergeFiles(subArray);
+                    newPdf.Save(
+                        $"{Environment.CurrentDirectory}\\temp\\EtiquetasOdT_{fechayhora}_{i + 1}.pdf",
+                        Spire.Pdf.FileFormat.PDF);
+                    newPdf.Close();
+                    archivosPDF.Add($"{Environment.CurrentDirectory}\\temp\\EtiquetasOdT_{fechayhora}_{i + 1}.pdf");
+                }
+                
+            }
 
             foreach (string fileName in listaPDF)
             {
                 System.IO.File.Delete(fileName);
             }
 
-            return $"{Environment.CurrentDirectory}\\temp\\EtiquetasOdT_{fechayhora}_{guid}.pdf";
+            return archivosPDF;
         }
     }
 }

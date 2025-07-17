@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\controllers\\documentopdfcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:controllers\\documentopdfcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|d:\\users\\lenovo\\documents\\visual studio 2022\\proyectos\\polyempaques_api\\data\\documentopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977954BE-700D-48DF-B912-5B61F0D8F3C6}|Polyempaques_API.csproj|solutionrelative:data\\documentopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-16T06:22:54.626Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DocumentoPDFController.cs",
+              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\DocumentoPDFController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DocumentoPDFController.cs",
+              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Controllers\\DocumentoPDFController.cs",
+              "RelativeToolTip": "Controllers\\DocumentoPDFController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwDUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T16:57:35.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DocumentoPDF.cs",
+              "DocumentMoniker": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\DocumentoPDF.cs",
+              "RelativeDocumentMoniker": "Data\\DocumentoPDF.cs",
+              "ToolTip": "D:\\Users\\Lenovo\\Documents\\Visual Studio 2022\\Proyectos\\Polyempaques_API\\Data\\DocumentoPDF.cs",
+              "RelativeToolTip": "Data\\DocumentoPDF.cs",
+              "ViewState": "AgIAAGkBAAAAAAAAAAAgwCcBAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T16:23:14.463Z",
+              "EditorCaption": ""
             }
           ]
         }

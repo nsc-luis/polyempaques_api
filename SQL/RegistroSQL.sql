@@ -24,6 +24,7 @@ CREATE TABLE OdT1 (
 	totalKgOT decimal(10,2) not null,
 	idUsuario int not null,
 	timestamp datetime not null getdate,
+	activo bit not null default 1
 )
 
 CREATE TABLE producto1 (
@@ -42,4 +43,5 @@ CREATE TABLE movimientosOT1 (
 	quantity int not null,
 	idUsuario int not null,
 	timestamp datetime not null getdate,
+	activo bit not null default 1
 )

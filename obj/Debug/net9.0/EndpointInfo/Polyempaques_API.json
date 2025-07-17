@@ -89,6 +89,37 @@
         }
       }
     },
+    "/api/DocumentoPDF/ListaPdfOdT": {
+      "post": {
+        "tags": [
+          "DocumentoPDF"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OdTFromBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OdTFromBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OdTFromBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/DocumentoPDF/EtiquetasDeLaOdt": {
       "post": {
         "tags": [
@@ -98,20 +129,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string"
               }
             },
             "text/json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string"
               }
             }
           }
@@ -335,6 +363,16 @@
   },
   "components": {
     "schemas": {
+      "OdTFromBody": {
+        "type": "object",
+        "properties": {
+          "idOdT": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "QR": {
         "type": "object",
         "properties": {

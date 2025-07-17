@@ -17,7 +17,12 @@ namespace Polyempaques_API.Controllers
         {
             this._context = context;
         }
-        
+
+        public class OdTFromBody
+        {
+            public int idOdT { get; set; }
+        }
+
         [HttpPost]
         [Route("[action]")]
         [EnableCors("AllowAnyOrigin")]
@@ -47,13 +52,36 @@ namespace Polyempaques_API.Controllers
         [HttpPost]
         [Route("[action]")]
         [EnableCors("AllowAnyOrigin")]
-        public IActionResult EtiquetasDeLaOdt([FromBody] int idOdT)
+        public IActionResult ListaPdfOdT([FromBody] OdTFromBody odt)
         {
             try
             {
                 DocumentoPDF documentoPDF = new DocumentoPDF(_context);
-                string pdf = documentoPDF.EtiquetasDeUnaOdT(idOdT);
-                byte[] FileByteData = System.IO.File.ReadAllBytes(pdf);
+                List<string> listaArchivos = documentoPDF.EtiquetasDeUnaOdT(odt.idOdT);
+                return Ok(new
+                {
+                    status = "ok",
+                    listaArchivos
+                });
+            }
+            catch (Exception ex)
+            {
+                return Ok(new
+                {
+                    status = "error",
+                    mensaje = ex
+                });
+            }
+        }
+
+        [HttpPost]
+        [Route("[action]")]
+        [EnableCors("AllowAnyOrigin")]
+        public IActionResult EtiquetasDeLaOdt([FromBody] string file)
+        {
+            try
+            {
+                byte[] FileByteData = System.IO.File.ReadAllBytes(file);
                 return File(FileByteData, "application/pdf");
             }
             catch (Exception ex)
